@@ -1,0 +1,30 @@
+name: CI/CD workflow
+
+on:
+  workflow_dispatch:
+
+env:
+  AWS_REGION: eu-north-1          
+  ECR_REPOSITORY: ecr-repo-lab11       
+  S3_BUCKET: ml-bucket-lab11           
+
+jobs:
+  integration:
+    name: checks_and_tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code repo
+        uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Install dependencies
+        run: uv sync --only-group integration
+
+      - name: Run ruff
+        run: uv run ruff check .
+
+      - name: Run pytest
+        run: uv run pytest tests
