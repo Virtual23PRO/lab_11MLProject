@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
 
 env:
-  AWS_REGION: eu-north-1
+  AWS_REGION: us-east-1
   ECR_REPOSITORY: ecr-repo-lab11
-  S3_BUCKET: ml-bucket-lab11
+  S3_BUCKET: mlops-lab11-models-jacek-tysz
 
 jobs:
   integration:
