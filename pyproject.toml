@@ -1,50 +1,51 @@
 [project]
-name = "lab-1mlhomework"
+name = "lab-11mlhomework"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "clean-text>=0.6.0",
-    "fastapi>=0.119.1",
-    "joblib>=1.5.2",
-    "pydantic-settings>=2.11.0",
-    "pytest>=8.4.2",
-    "scikit-learn>=1.7.2",
-    "sentence-transformers>=5.1.1",
-    "torch>=2.9.0",
-    "transformers>=4.57.1",
-    "uvicorn>=0.38.0",
+  "clean-text>=0.6.0",
+  "fastapi>=0.119.1",
+  "joblib>=1.5.2",
+  "pydantic-settings>=2.11.0",
+  "scikit-learn>=1.7.2",
+  "uvicorn>=0.38.0",
+  "numpy>=1.26.0",
 ]
 
 [dependency-groups]
 integration = [
-    "pytest>=8.4.2",
-    "ruff>=0.14.1",
-    "mypy>=1.18.2",
-    "httpx>=0.28.1",
-    "pre-commit>=4.3.0",
+  "pytest>=8.4.2",
+  "ruff>=0.14.1",
+  "mypy>=1.18.2",
+  "httpx>=0.28.1",
+  "pre-commit>=4.3.0",
 ]
 
 deployment = [
-    "clean-text>=0.6.0",
-    "fastapi>=0.119.1",
-    "joblib>=1.5.2",
-    "pydantic-settings>=2.11.0",
-    "scikit-learn>=1.7.2",
-    "sentence-transformers>=5.1.1",
-    "torch>=2.9.0",
-    "transformers>=4.57.1",
-    "uvicorn>=0.38.0"
+  "clean-text>=0.6.0",
+  "fastapi>=0.119.1",
+  "joblib>=1.5.2",
+  "pydantic-settings>=2.11.0",
+  "scikit-learn>=1.7.2",
+  "sentence-transformers>=5.1.1",
+  "torch>=2.9.0",
+  "transformers>=4.57.1",
+  "boto3>=1.35.0",
+  "skl2onnx>=1.16.0",
+  "onnx>=1.16.0",
 ]
 
 inference = [
-    "clean-text>=0.6.0",
-    "fastapi>=0.119.1",
-    "joblib>=1.5.2",
-    "pydantic-settings>=2.11.0",
-    "scikit-learn>=1.7.2",
-    "uvicorn>=0.38.0",
-    "onnxruntime",
-    "tokenizers",
+  "clean-text>=0.6.0",
+  "fastapi>=0.119.1",
+  "joblib>=1.5.2",
+  "pydantic-settings>=2.11.0",
+  "scikit-learn>=1.7.2",
+  "uvicorn>=0.38.0",
+  "onnxruntime>=1.19.0",
+  "tokenizers>=0.15.0",
+  "numpy>=1.26.0",
 ]
+
