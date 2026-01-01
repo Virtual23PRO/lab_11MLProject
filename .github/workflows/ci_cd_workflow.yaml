@@ -5,7 +5,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: ecr-repo-lab11
+  ECR_REPOSITORY: sentiment-app-onnx
   S3_BUCKET: mlops-lab11-models-jacek-tysz
 
 jobs:
