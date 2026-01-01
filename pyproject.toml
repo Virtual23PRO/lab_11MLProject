@@ -47,5 +47,7 @@ inference = [
   "onnxruntime>=1.19.0",
   "tokenizers>=0.15.0",
   "numpy>=1.26.0",
+  "mangum",
+  "awslambdaric",
 ]
 

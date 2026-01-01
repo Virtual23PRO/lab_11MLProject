@@ -1,3 +1,5 @@
+from mangum import Mangum
+
 from typing import Dict
 
 import numpy as np
@@ -34,6 +36,7 @@ class PredictionOut(BaseModel):
 
 app = FastAPI()
 
+handler = Mangum(app)
 
 @app.post("/predict", response_model=PredictionOut)
 def predict(payload: TextIn) -> PredictionOut:
